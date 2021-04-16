@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="idShvellerYRadioButton"
+        type="id" />
+    <item name="idShvellerPRadioButton"
+        type="id" />
+    <item name="idShvellerYX2RadioButton"
+        type="id" />
+    <item name="idShvellerPX2RadioButton"
+        type="id" />
+    <item name="idDvutavBRadioButton"
+        type="id" />
+    <item name="idDvutavKRadioButton"
+        type="id" />
+</resources>

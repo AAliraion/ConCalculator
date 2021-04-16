@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:orientation="vertical"
+    tools:context=".stBalka.StBalkaSchema1CopyActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/qTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/loadEditText"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="9dp"
+            android:text="q ="
+            android:textSize="18sp"
+            />
+
+        <EditText
+            android:id="@+id/loadEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="нагрузка"
+            android:text="350"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberDecimal"
+            android:gravity="center_horizontal"
+
+            />
+
+        <TextView
+            android:id="@+id/kgTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/loadEditText"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="5dp"
+            android:text="кг/м"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/st_balka_schema1" />
+
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/lTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_toLeftOf="@id/lengthEditText"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="9dp"
+            android:text="L ="
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/lengthEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="длина"
+            android:text="4450"
+            android:layout_centerHorizontal="true"
+            android:inputType="numberDecimal"
+            android:gravity="center_horizontal"
+            />
+
+        <TextView
+            android:id="@+id/mmTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lengthEditText"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="5dp"
+            android:text="мм"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Введите предельный прогиб"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/deflectionSpinner"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="9dp"
+            android:text="L/"
+            android:textSize="18sp" />
+
+        <Spinner
+            android:id="@+id/deflectionSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/deflectionSpinner"
+            android:layout_marginTop="9dp"
+            android:layout_marginLeft="5dp"
+            android:text="мм"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выберете сечение для расчета"
+        android:gravity="center_horizontal"
+        android:textSize="15sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:onClick="shvellerOnClick"
+            android:id="@+id/shvellerImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/shveller"
+            android:layout_toLeftOf="@id/dvaShvelleraImageView"/>
+
+        <ImageView
+            android:onClick="dvaShvelleraOnClick"
+            android:id="@+id/dvaShvelleraImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dva_shvellera"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:onClick="dvutavrOnClick"
+            android:id="@+id/dvutavrImageView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/dvutavr"
+            android:layout_toRightOf="@id/dvaShvelleraImageView"/>
+
+        <RadioGroup
+            android:id="@+id/radioGroupShveller"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dvaShvelleraImageView"
+            android:layout_marginTop="8dp">
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/radioGroupShvellerX2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dvaShvelleraImageView"
+            android:layout_marginTop="8dp">
+        </RadioGroup>
+
+
+        <RadioGroup
+            android:id="@+id/radioGroupDvutavr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dvaShvelleraImageView"
+            android:layout_marginTop="8dp">
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/vypolnitRaschetButton"
+        android:onClick="vypolnitRaschetOnClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Выполнить расчет"
+        android:backgroundTint="@color/gray"
+        />
+
+
+    </LinearLayout>
+
+</ScrollView>

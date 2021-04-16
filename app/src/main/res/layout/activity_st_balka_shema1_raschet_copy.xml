@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".stBalka.StBalkaShema1RaschetCopyActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/qTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/loadTextView"
+                android:layout_marginTop="9dp"
+                android:text="q ="
+                android:textSize="18sp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/loadTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:layout_centerHorizontal="true"
+                android:hint="нагрузка"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+
+                />
+
+            <TextView
+                android:id="@+id/kgTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/loadTextView"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:text="кг/м"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/st_balka_schema1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/lengthTextView"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:text="L ="
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/lengthTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:hint="длина"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lengthTextView"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:text="мм"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/progibLTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/deflectionTextView"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:text="L/"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/deflectionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:hint="прогиб"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/mmTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/deflectionTextView"
+                android:layout_marginTop="9dp"
+                android:layout_marginLeft="5dp"
+                android:text="мм"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Эпюра поперечной силы Q"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewGostInt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/epuzaQimageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/st_balka_schema1_epura_q" />
+
+            <TextView
+                android:id="@+id/epuraQpolozhZnachTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="q"
+                android:textSize="18dp"
+                android:textColor="@color/red"
+                android:layout_marginLeft="90dp"
+                />
+
+            <TextView
+                android:id="@+id/epuraQotricZnachTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="q"
+                android:textSize="18dp"
+                android:textColor="@color/red"
+                android:layout_marginRight="70dp"
+                android:layout_marginTop="170dp"
+                android:layout_alignParentRight="true"
+
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Эпюра момента M"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/epuzaMimageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/st_balka_schema1_epura_m" />
+
+            <TextView
+                android:id="@+id/epuraMTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="q"
+                android:textSize="18dp"
+                android:textColor="@color/red"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="170dp"
+                />
+
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Примечание"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="Расчет ведется согласно СНиП I I-23-8. Считается, что верхний
+пояс балки раскреплен конструктивно (профлистом, настилом...).
+Прогиб считается по расчетной нагрузке (в запас). Сталь принята
+С235 с расчётным сопротивлением Ry=2100кг/см2, E=2100000кг/см2,
+γс=1."
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="1. Находим максимальную поперечную силу Qmax:"
+            />
+
+
+        <TextView
+            android:id="@+id/formulaQmaxTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="10dp"
+            android:fontFamily="serif"
+            android:text="формула Qmax"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="2. Находим максимальный момент Mmax:"
+            />
+
+
+        <TextView
+            android:id="@+id/formulaMmaxTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="формула Mmax"
+            android:fontFamily="serif"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="3. Находим требуемый момент сопротивления Wтр:"
+            />
+
+
+        <TextView
+            android:id="@+id/formulaWtrTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="формула Wтр"
+            android:fontFamily="serif"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="4. Находим требуемый момент инерции Iтр:"
+            />
+
+
+        <TextView
+            android:id="@+id/formulaItrTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="формула Iтр"
+            android:fontFamily="serif"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp"
+            android:text="5. По Wтр и Iтр из таблицы сортамента металлопроката подбираем металлическую балку:"
+            />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/selectedProfileImegeView"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@color/gray"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/selectedProfileTextView"
+                />
+
+            <TextView
+                android:id="@+id/selectedProfileTextView"
+                android:text="Двутавр нормальный - Б, ГОСТ 26020-83"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/infoSelectionProfileTextView"
+                android:text="№00"
+                android:layout_toEndOf="@id/selectedProfileImegeView"
+                android:layout_below="@+id/selectedProfileTextView"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                />
+
+<!--            <TextView-->
+<!--                android:id="@+id/momentSoprotivlenyaPodobrannogoSecheniyaTextView"-->
+<!--                android:text="Wy = 158.0 см³"-->
+<!--                android:layout_toEndOf="@id/vybrannoeSechenieImegeView"-->
+<!--                android:layout_below="@+id/nomerPodobrannogoSecheniyaTextView"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:textSize="18sp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/momentInertsiiPodobrannogoSecheniyaTextView"-->
+<!--                android:text="Iy = 652.4 см⁴"-->
+<!--                android:layout_toEndOf="@id/vybrannoeSechenieImegeView"-->
+<!--                android:layout_below="@+id/momentSoprotivlenyaPodobrannogoSecheniyaTextView"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:textSize="18sp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/massaPodobrannogoSecheniyaTextView"-->
+<!--                android:text="m = 12.8 кг/м"-->
+<!--                android:layout_toEndOf="@id/vybrannoeSechenieImegeView"-->
+<!--                android:layout_below="@+id/momentInertsiiPodobrannogoSecheniyaTextView"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:textSize="18sp"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                />-->
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:text="Выберете расчитываемую конструкцию" />
+
+    <Button
+        android:id="@+id/stBalka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Стальная балка"
+        android:onClick="stBalkaOnClick"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/gray"
+        />
+
+   <Button
+        android:id="@+id/derBalka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Деревянная балка"
+        android:onClick="derBalkaOnClick"
+       android:layout_marginRight="30dp"
+       android:layout_marginLeft="30dp"
+       android:backgroundTint="@color/gray"
+        />
+
+    <Button
+        android:id="@+id/stStoyka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Стальная стойка"
+        android:onClick="stStoykaOnClick"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/gray"
+        />
+
+    <Button
+        android:id="@+id/derStoyka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Деревянная стойка"
+        android:onClick="derStoykaOnClick"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/gray"
+        />
+
+    <Button
+        android:id="@+id/lentFundament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ленточный фундамент"
+        android:onClick="lentFundamentOnClick"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/gray"
+        />
+
+</LinearLayout>
