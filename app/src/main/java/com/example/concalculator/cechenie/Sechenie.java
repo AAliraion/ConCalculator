@@ -104,10 +104,10 @@ public class Sechenie implements Comparable<Sechenie> {
     @Override
     public int compareTo(Sechenie o) {
         int result = this.getMomentOfInertia() < o.getMomentOfInertia() ? -1 : 1;
-//
-//        if (result > -2){
-//            result = this.getMomentOfResistance() < o.getMomentOfResistance() ? -1 : 1;
-//        }
+
+        if (result > -2){
+            result = this.getMomentOfResistance() < o.getMomentOfResistance() ? -1 : 1;
+        }
         return result;
     }
 

@@ -13,9 +13,9 @@
             android:name=".NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/Theme.ConCalculator.NoActionBar"></activity>
-        <activity android:name=".stBalka.StBalkaShema1RaschetCopyActivity" />
-        <activity android:name=".stBalka.StBalkaSchema1CopyActivity" />
-        <activity android:name=".stBalka.StBalkaCopyActivity" />
+        <activity android:name=".stBalka.StBalkaShema1RaschetActivity" />
+        <activity android:name=".stBalka.StBalkaSchema1Activity" />
+        <activity android:name=".stBalka.StBalkaActivity" />
         <activity android:name=".derBalka.DerBalkaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

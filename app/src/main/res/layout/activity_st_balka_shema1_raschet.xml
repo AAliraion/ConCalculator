@@ -8,7 +8,7 @@
     android:layout_marginLeft="15dp"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    tools:context=".stBalka.StBalkaShema1RaschetCopyActivity">
+    tools:context=".stBalka.StBalkaShema1RaschetActivity">
 
 
 

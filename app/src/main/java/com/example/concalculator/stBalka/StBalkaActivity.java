@@ -8,12 +8,12 @@ import android.view.View;
 
 import com.example.concalculator.R;
 
-public class StBalkaCopyActivity extends AppCompatActivity {
+public class StBalkaActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_copy);
+        setContentView(R.layout.activity_st_balka);
 
         setTitle("Выберите расчетную схему");
 
@@ -23,7 +23,7 @@ public class StBalkaCopyActivity extends AppCompatActivity {
     }
 
     public void shema1ButtonOnClick(View view) {
-        Intent vvodDannyhSchema1Intent = new Intent (StBalkaCopyActivity.this, StBalkaSchema1CopyActivity.class);
+        Intent vvodDannyhSchema1Intent = new Intent (StBalkaActivity.this, StBalkaSchema1Activity.class);
         startActivity(vvodDannyhSchema1Intent);
 
     }

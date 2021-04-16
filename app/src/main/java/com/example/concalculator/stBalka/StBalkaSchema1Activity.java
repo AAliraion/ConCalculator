@@ -15,10 +15,9 @@ import android.widget.Spinner;
 import com.example.concalculator.R;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
-public class StBalkaSchema1CopyActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class StBalkaSchema1Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     public EditText loadEditText;
     public EditText lengthEditText;
@@ -39,7 +38,7 @@ public class StBalkaSchema1CopyActivity extends AppCompatActivity implements Ada
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_schema1_copy);
+        setContentView(R.layout.activity_st_balka_schema1);
 
         setTitle("Введите нагрузку и пролет балки");
 
@@ -196,7 +195,7 @@ public class StBalkaSchema1CopyActivity extends AppCompatActivity implements Ada
 
         int putGost = valueSelectedGost;
 
-        Intent performCalculationIntent = new Intent(StBalkaSchema1CopyActivity.this, StBalkaShema1RaschetCopyActivity.class);
+        Intent performCalculationIntent = new Intent(StBalkaSchema1Activity.this, StBalkaShema1RaschetActivity.class);
 
         String putLoad = loadEditText.getText().toString();
         performCalculationIntent.putExtra("load", putLoad);

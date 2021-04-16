@@ -63,4 +63,7 @@ public class ShvellerU_GOST_8240_89 extends Shveller {
         shveller40U.putIn(shveller40U);
     }
 
+    public static void deleteShvellerU(){
+    }
+
 }

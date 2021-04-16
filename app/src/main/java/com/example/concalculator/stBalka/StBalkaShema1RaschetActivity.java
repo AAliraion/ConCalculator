@@ -14,7 +14,7 @@ import com.example.concalculator.cechenie.shveller.ShvellerPx2_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerU_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerUx2_GOST_8240_89;
 
-public class StBalkaShema1RaschetCopyActivity extends AppCompatActivity{
+public class StBalkaShema1RaschetActivity extends AppCompatActivity{
 
     private ImageView selectedProfileImageView;
     private TextView loadTextView;
@@ -36,7 +36,7 @@ public class StBalkaShema1RaschetCopyActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_shema1_raschet_copy);
+        setContentView(R.layout.activity_st_balka_shema1_raschet);
         setTitle("Решение");
 
         Intent intent = getIntent();
@@ -80,9 +80,6 @@ public class StBalkaShema1RaschetCopyActivity extends AppCompatActivity{
 
         double lengthMToFormula = lengthToFormula / 1000;
         double resultQmax = loadToFormula / 1000 * lengthMToFormula /2;
-        int degreeTwo = 2;   //для числа в степени 2
-        int degreeFive = 5;      //для числа в степени 5
-        int degreeSix = 6;    //для числа в степени 5
         double resultMmax = loadToFormula / 1000 * Math.pow(lengthMToFormula, 2) /8;
         double resultWtr = resultMmax * 100 / (1.12*2.1);
         double resultItr = resultMmax * Math.pow(10, 5) * lengthMToFormula * Math.pow(10, 2) * deflectionToFormula / (10 * 2.1 * Math.pow(10, 6));

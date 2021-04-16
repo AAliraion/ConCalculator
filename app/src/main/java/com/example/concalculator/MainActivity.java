@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.concalculator.derBalka.DerBalkaActivity;
-import com.example.concalculator.stBalka.StBalkaCopyActivity;
+import com.example.concalculator.stBalka.StBalkaActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void stBalkaOnClick(View view) {
 
-    Intent vyborRaschetaIntent = new Intent (MainActivity.this, StBalkaCopyActivity.class);
+    Intent vyborRaschetaIntent = new Intent (MainActivity.this, StBalkaActivity.class);
     startActivity(vyborRaschetaIntent);
     }
 
