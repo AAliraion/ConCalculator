@@ -1,4 +1,4 @@
-package com.example.concalculator.stBalka;
+package com.example.concalculator.stBalka.schema1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -195,7 +195,7 @@ public class StBalkaSchema1Activity extends AppCompatActivity implements Adapter
 
         int putGost = valueSelectedGost;
 
-        Intent performCalculationIntent = new Intent(StBalkaSchema1Activity.this, StBalkaShema1RaschetActivity.class);
+        Intent performCalculationIntent = new Intent(StBalkaSchema1Activity.this, StBalkaSchema1RaschetActivity.class);
 
         String putLoad = loadEditText.getText().toString();
         performCalculationIntent.putExtra("load", putLoad);

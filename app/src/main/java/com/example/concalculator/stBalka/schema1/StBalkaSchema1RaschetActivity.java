@@ -1,11 +1,10 @@
-package com.example.concalculator.stBalka;
+package com.example.concalculator.stBalka.schema1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.example.concalculator.R;
 import com.example.concalculator.cechenie.dvutavr.DvutavrB_Gost26020_83;
@@ -15,7 +14,7 @@ import com.example.concalculator.cechenie.shveller.ShvellerPx2_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerU_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerUx2_GOST_8240_89;
 
-public class StBalkaShema1RaschetActivity extends AppCompatActivity{
+public class StBalkaSchema1RaschetActivity extends AppCompatActivity{
 
     private ImageView selectedProfileImageView;
     private TextView loadTextView;
@@ -37,7 +36,7 @@ public class StBalkaShema1RaschetActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_shema1_raschet);
+        setContentView(R.layout.activity_st_balka_schema1_raschet);
         setTitle("Решение");
 
         Intent intent = getIntent();

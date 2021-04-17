@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.concalculator.R;
+import com.example.concalculator.stBalka.schema1.StBalkaSchema1Activity;
 
 public class StBalkaActivity extends AppCompatActivity {
 
