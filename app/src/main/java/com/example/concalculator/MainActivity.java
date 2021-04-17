@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void lentFundamentOnClick(View view) {
+        Intent testIntent = new Intent(this, NavigationDrawerActivity.class);
+            startActivity(testIntent);
+
      }
 
     public void derStoykaOnClick(View view) {
