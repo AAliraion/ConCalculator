@@ -3,22 +3,14 @@ package com.example.concalculator;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
 
-import com.example.concalculator.R;
-import com.example.concalculator.stBalka.StBalkaActivity;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import com.example.concalculator.steelBeam.SteelBeamActivity;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.core.view.GravityCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -54,8 +46,8 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_home){
-            Intent intent = new Intent (NavigationDrawerActivity.this, StBalkaActivity.class);
+        if (id == R.id.nav_stBeam){
+            Intent intent = new Intent (NavigationDrawerActivity.this, SteelBeamActivity.class);
             startActivity(intent);
         }
         drawer.closeDrawer(GravityCompat.START);

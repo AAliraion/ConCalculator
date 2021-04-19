@@ -1,4 +1,4 @@
-package com.example.concalculator.stBalka.schema2;
+package com.example.concalculator.steelBeam.schema2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,6 +11,6 @@ public class StBalkaSchema2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_schema2);
+        setContentView(R.layout.activity_steel_beam_schema2);
     }
 }

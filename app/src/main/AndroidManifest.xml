@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConCalculator">
-        <activity android:name=".stBalka.schema2.StBalkaSchema2Activity"></activity>
+        <activity android:name=".steelBeam.schema2.StBalkaSchema2Activity"></activity>
         <activity
             android:name=".NavigationDrawerActivity"
             android:label="@string/title_activity_navigation_drawer"
             android:theme="@style/Theme.ConCalculator.NoActionBar" />
-        <activity android:name=".stBalka.schema1.StBalkaSchema1RaschetActivity" />
-        <activity android:name=".stBalka.schema1.StBalkaSchema1Activity" />
-        <activity android:name=".stBalka.StBalkaActivity" />
-        <activity android:name=".derBalka.DerBalkaActivity" />
+        <activity android:name=".steelBeam.schema1.SteelBeamSchema1CalculationActivity" />
+        <activity android:name=".steelBeam.schema1.SteelBeamSchema1Activity" />
+        <activity android:name=".steelBeam.SteelBeamActivity" />
+        <activity android:name=".woodBeam.WoodBeamActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

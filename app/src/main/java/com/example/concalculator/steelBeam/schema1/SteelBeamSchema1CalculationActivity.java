@@ -1,4 +1,4 @@
-package com.example.concalculator.stBalka.schema1;
+package com.example.concalculator.steelBeam.schema1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +14,7 @@ import com.example.concalculator.cechenie.shveller.ShvellerPx2_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerU_GOST_8240_89;
 import com.example.concalculator.cechenie.shveller.ShvellerUx2_GOST_8240_89;
 
-public class StBalkaSchema1RaschetActivity extends AppCompatActivity{
+public class SteelBeamSchema1CalculationActivity extends AppCompatActivity{
 
     private ImageView selectedProfileImageView;
     private TextView loadTextView;
@@ -36,7 +36,7 @@ public class StBalkaSchema1RaschetActivity extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_schema1_raschet);
+        setContentView(R.layout.activity_steel_beam_schema1_calculation);
         setTitle("Решение");
 
         Intent intent = getIntent();

@@ -7,8 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.concalculator.derBalka.DerBalkaActivity;
-import com.example.concalculator.stBalka.StBalkaActivity;
+import com.example.concalculator.woodBeam.WoodBeamActivity;
+import com.example.concalculator.steelBeam.SteelBeamActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,12 +23,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void stBalkaOnClick(View view) {
 
-    Intent vyborRaschetaIntent = new Intent (MainActivity.this, StBalkaActivity.class);
+    Intent vyborRaschetaIntent = new Intent (MainActivity.this, SteelBeamActivity.class);
     startActivity(vyborRaschetaIntent);
     }
 
     public void derBalkaOnClick(View view) {
-        Intent vyborRaschetaIntent = new Intent (MainActivity.this, DerBalkaActivity.class);
+        Intent vyborRaschetaIntent = new Intent (MainActivity.this, WoodBeamActivity.class);
         startActivity(vyborRaschetaIntent);
     }
 

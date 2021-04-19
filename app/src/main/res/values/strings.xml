@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">ConCalculator</string>
-    <string name="shveller_Y">Швелллер с уклоном внутренних граней полок – У, ГОСТ 8240-97</string>
-    <string name="shveller_P">Швелллер с параллельными гранями полок - П, ГОСТ 8240-97</string>
-    <string name="shveller_Y_x2">Швелллер х2 с уклоном внутренних граней полок - У, ГОСТ 8240-97</string>
-    <string name="shveller_P_x2">Швелллер х2 с параллельными гранями полок - П, ГОСТ 8240-97</string>
-    <string name="dvutavr_B">Двутавр нормальный - Б, ГОСТ 26020-83</string>
-    <string name="dvutavr_K">Двутавр колонный - К, ГОСТ 26020-83</string>
+    <string name="shveller_Y">Швелллер с уклоном внутренних граней полок – У, ГОСТ 8240–97</string>
+    <string name="shveller_P">Швелллер с параллельными гранями полок – П, ГОСТ 8240–97</string>
+    <string name="shveller_Y_x2">Швелллер х2 с уклоном внутренних граней полок – У, ГОСТ 8240–97</string>
+    <string name="shveller_P_x2">Швелллер х2 с параллельными гранями полок – П, ГОСТ 8240–97</string>
+    <string name="dvutavr_B">Двутавр нормальный – Б, ГОСТ 26020–83</string>
+    <string name="dvutavr_K">Двутавр колонный – К, ГОСТ 26020–83</string>
     <string name="title_activity_navigation_drawer">NavigationDrawerActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -13,8 +13,10 @@
     <string name="nav_header_subtitle">alisher95x@gmail.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-
+    <string name="choose_calculation_construction">Выберете расчитываемую конструкцию</string>
+    <string name="bottom_steel_beam">Стальная балка</string>
+    <string name="bottom_wood_beam">Деревянная балка</string>
+    <string name="bottom_steel_rack">Стальная стойка</string>
+    <string name="bottom_wood_rack">Деревянная стойка</string>
+    <string name="button_strip_foundation">Ленточный фундамент</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.concalculator.stBalka.schema1;
+package com.example.concalculator.steelBeam.schema1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +17,7 @@ import com.example.concalculator.R;
 import java.util.ArrayList;
 
 
-public class StBalkaSchema1Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class SteelBeamSchema1Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     public EditText loadEditText;
     public EditText lengthEditText;
@@ -38,7 +38,7 @@ public class StBalkaSchema1Activity extends AppCompatActivity implements Adapter
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_st_balka_schema1);
+        setContentView(R.layout.activity_steel_beam_schema1);
 
         setTitle("Введите нагрузку и пролет балки");
 
@@ -195,7 +195,7 @@ public class StBalkaSchema1Activity extends AppCompatActivity implements Adapter
 
         int putGost = valueSelectedGost;
 
-        Intent performCalculationIntent = new Intent(StBalkaSchema1Activity.this, StBalkaSchema1RaschetActivity.class);
+        Intent performCalculationIntent = new Intent(SteelBeamSchema1Activity.this, SteelBeamSchema1CalculationActivity.class);
 
         String putLoad = loadEditText.getText().toString();
         performCalculationIntent.putExtra("load", putLoad);
