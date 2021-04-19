@@ -46,7 +46,7 @@ public class NavigationDrawerActivity extends AppCompatActivity implements Navig
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.nav_stBeam){
+        if (id == R.id.nav_steelBeam){
             Intent intent = new Intent (NavigationDrawerActivity.this, SteelBeamActivity.class);
             startActivity(intent);
         }

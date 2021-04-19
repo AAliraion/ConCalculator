@@ -3,9 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_stBeam"
-            android:title="@string/dvutavr_K"/>
-    </group>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_steelBeam"
+                    android:title="@string/button_steel_beam"/>
+                <item
+                    android:id="@+id/nav_woodBeam"
+                    android:title="@string/button_wood_beam"/>
+                <item
+                    android:id="@+id/nav_steelRack"
+                    android:title="@string/button_steel_rack"/>
+                <item
+                    android:id="@+id/nav_woodRack"
+                    android:title="@string/button_wood_rack"/>
+                <item
+                    android:id="@+id/nav_stripFoundation"
+                    android:title="@string/button_strip_foundation"/>
+            </group>
+
 </menu>
