@@ -8,6 +8,7 @@ public class Sechenie implements Comparable<Sechenie> {
     private double momentOfResistance;
     private double momentOfInertia;
     private double mass;
+    private static int compareId = 1;
 
     private static NavigableSet<Sechenie> listOfAllObjects = new TreeSet<Sechenie>();
 
@@ -18,21 +19,24 @@ public class Sechenie implements Comparable<Sechenie> {
         this.mass = mass;
     }
 
-    public void setName(String name){
-        this.name = name;
-    }
-
-    public void setMomentOfResistance(double momentOfResistance){
-        this.momentOfResistance = momentOfResistance;
-    }
-
-    public void setMomentOfInertia(double momentOfInertia){
-        this.momentOfInertia = momentOfInertia;
-    }
-
-    public void setMass(int mass){
-        this.mass = mass;
-    }
+//    public Sechenie (){
+//    }
+//
+//    public void setName(String name){
+//        this.name = name;
+//    }
+//
+//    public void setMomentOfResistance(double momentOfResistance){
+//        this.momentOfResistance = momentOfResistance;
+//    }
+//
+//    public void setMomentOfInertia(double momentOfInertia){
+//        this.momentOfInertia = momentOfInertia;
+//    }
+//
+//    public void setMass(int mass){
+//        this.mass = mass;
+//    }
 
     public String getName(){
         return name;
@@ -54,61 +58,57 @@ public class Sechenie implements Comparable<Sechenie> {
         System.out.println(name + " " + momentOfResistance + " " + momentOfInertia + " " + mass);
     }
 
-    public void putIn(Sechenie obj) { // name method is awesome :)
+    public void putIn(Sechenie obj) {
         listOfAllObjects.add(obj);
     }
 
+    public static Sechenie checkMomentOfResistanceModified(Sechenie closestValue) {
+        compareId = 1;
+        if (listOfAllObjects.ceiling(closestValue) == null) return listOfAllObjects.floor(closestValue);
+        if (listOfAllObjects.floor(closestValue) == null) return listOfAllObjects.ceiling(closestValue);
 
-    public static Sechenie checkMomentOfInertia(Sechenie closestValueOfInertia) {
-        if (listOfAllObjects.ceiling(closestValueOfInertia) == null) {
-            return listOfAllObjects.higher(closestValueOfInertia);
-        }
-        if (listOfAllObjects.higher(closestValueOfInertia) == null) {
-            return listOfAllObjects.ceiling(closestValueOfInertia);
-        }
-
-        double distanceCeilingInertia = listOfAllObjects.ceiling(closestValueOfInertia).getMomentOfInertia() - closestValueOfInertia.getMomentOfInertia();
-        double distanceHigherInertia = closestValueOfInertia.getMomentOfInertia() - listOfAllObjects.higher(closestValueOfInertia).getMomentOfInertia();
-
-
-        return distanceCeilingInertia > distanceHigherInertia ? listOfAllObjects.higher(closestValueOfInertia) : listOfAllObjects.ceiling(closestValueOfInertia);
+        return listOfAllObjects.ceiling(closestValue);
     }
 
-    public static Sechenie checkMomentOfResistance(Sechenie closestValueOfResistance) {
-        if (listOfAllObjects.ceiling(closestValueOfResistance) == null) {
-            return listOfAllObjects.higher(closestValueOfResistance);
-        }
-        if (listOfAllObjects.higher(closestValueOfResistance) == null) {
-            return listOfAllObjects.ceiling(closestValueOfResistance);
-        }
+    public static Sechenie checkMomentOfInertiaModified(Sechenie closestValue) {
+        compareId = 2;
+        if (listOfAllObjects.ceiling(closestValue) == null) return listOfAllObjects.floor(closestValue);
+        if (listOfAllObjects.floor(closestValue) == null) return listOfAllObjects.ceiling(closestValue);
 
-        double distanceCeilingResistance = listOfAllObjects.ceiling(closestValueOfResistance).getMomentOfResistance() - closestValueOfResistance.getMomentOfResistance();
-        double distanceHigherResistance = closestValueOfResistance.getMomentOfResistance() - listOfAllObjects.higher(closestValueOfResistance).getMomentOfResistance();
-
-        return distanceCeilingResistance > distanceHigherResistance ? listOfAllObjects.higher(closestValueOfResistance) : listOfAllObjects.ceiling(closestValueOfResistance);
+        return listOfAllObjects.ceiling(closestValue);
     }
 
-    public static String getClosestInertiaResistance(double closestValueOfInertia, double closestValueOfResistance) {
-        Sechenie resultObj = checkMomentOfResistance(new Sechenie("Search", closestValueOfResistance, closestValueOfInertia, 0));
-        if (resultObj.getMomentOfInertia() < closestValueOfInertia){
-            Sechenie resultObj1 = checkMomentOfInertia(new Sechenie("Search", closestValueOfResistance, closestValueOfInertia, 0));
-            return "Номер профиля: " + resultObj1.getName() + "\nWy = " + resultObj1.getMomentOfResistance() + " см³"+
-                    "\nIy = " + resultObj1.getMomentOfInertia() + " см⁴"+ "\nМасса: " + resultObj1.getMass() + " кг";
+    public static String getClosestMomentOfResistance(double closestValue) {
+        Sechenie resultObj = checkMomentOfResistanceModified(new Sechenie("Search", closestValue, 0, 0));
 
-        } else {
-            return "Номер профиля: " + resultObj.getName() + "\nWy = " + resultObj.getMomentOfResistance() + " см³"+
-                    "\nIy = " + resultObj.getMomentOfInertia() + " см⁴"+ "\nМасса: " + resultObj.getMass() + " кг";
-        }
+        return "Номер профиля: " + resultObj.getName() + "\nМомент сопротивления: " + resultObj.getMomentOfResistance();
+    }
+
+    public static Sechenie checkMomentOfResistanceAndInertia(Sechenie closestValue) {
+        Sechenie resultMomentSoprotivleniya = checkMomentOfResistanceModified(closestValue);
+        double distanceCeilingInertsii = resultMomentSoprotivleniya.getMomentOfInertia() - closestValue.getMomentOfInertia();
+
+        return distanceCeilingInertsii > 0 ? resultMomentSoprotivleniya : checkMomentOfInertiaModified(closestValue);
+    }
+
+    public static String getClosestMomentOfResistanceAndInertia(double closestOfResist, double closestOfInertia) {
+        Sechenie resultObj = checkMomentOfResistanceAndInertia(new Sechenie("Search", closestOfResist, closestOfInertia, 0));
+
+        return "Номер профиля: " + resultObj.getName() +
+                "\nWy = " + resultObj.getMomentOfResistance() +  " см³" +
+                "\nIy = " + resultObj.getMomentOfInertia() + " см⁴" +
+                "\nМасса = " + resultObj.getMass() + " кг";
     }
 
     @Override
     public int compareTo(Sechenie o) {
-        int result = this.getMomentOfInertia() < o.getMomentOfInertia() ? -1 : 1;
-
-        if (result > -2){
-            result = this.getMomentOfResistance() < o.getMomentOfResistance() ? -1 : 1;
+        if (compareId == 1) {
+            return this.getMomentOfResistance() < o.getMomentOfResistance() ? -1 : 1;
         }
-        return result;
+        if (compareId == 2) {
+            return this.getMomentOfInertia() < o.getMomentOfInertia() ? -1 : 1;
+        }
+        return 0;
     }
 
 }

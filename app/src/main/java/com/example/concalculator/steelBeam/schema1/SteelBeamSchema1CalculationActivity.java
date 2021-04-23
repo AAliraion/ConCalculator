@@ -93,11 +93,11 @@ public class SteelBeamSchema1CalculationActivity extends AppCompatActivity{
             selectedProfileImageView.setImageResource(R.drawable.shveller);
             if (getGostInt == 0){
                 ShvellerU_GOST_8240_89.addShvellerU();
-                infoSelectedProfileTextView.setText(ShvellerU_GOST_8240_89.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(ShvellerU_GOST_8240_89.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.shveller_Y);
             } else if (getGostInt == 1){
                 ShvellerP_GOST_8240_89.addShvellerP();
-                infoSelectedProfileTextView.setText(ShvellerP_GOST_8240_89.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(ShvellerP_GOST_8240_89.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.shveller_P);
             }else {
                 infoSelectedProfileTextView.setText("Профиль не выбран");
@@ -108,11 +108,11 @@ public class SteelBeamSchema1CalculationActivity extends AppCompatActivity{
             selectedProfileImageView.setImageResource(R.drawable.dva_shvellera);
             if(getGostInt == 10){
                 ShvellerUx2_GOST_8240_89.addShvellerUx2();
-                infoSelectedProfileTextView.setText(ShvellerUx2_GOST_8240_89.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(ShvellerUx2_GOST_8240_89.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.shveller_Y_x2);
             } else if (getGostInt == 11){
                 ShvellerPx2_GOST_8240_89.addShvellerPx2();
-                infoSelectedProfileTextView.setText(ShvellerPx2_GOST_8240_89.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(ShvellerPx2_GOST_8240_89.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.shveller_P_x2);
             } else {
                 infoSelectedProfileTextView.setText("Профиль не выбран");
@@ -123,11 +123,11 @@ public class SteelBeamSchema1CalculationActivity extends AppCompatActivity{
             selectedProfileImageView.setImageResource(R.drawable.dvutavr);
             if (getGostInt == 20){
                 DvutavrB_Gost26020_83.addDvutavrB();
-                infoSelectedProfileTextView.setText(DvutavrB_Gost26020_83.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(DvutavrB_Gost26020_83.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.dvutavr_B);
             } else if (getGostInt == 21){
                 DvutavrK_Gost26020_83.addDvutavrK();
-                infoSelectedProfileTextView.setText(DvutavrK_Gost26020_83.getClosestInertiaResistance(resultItr, resultWtr));
+                infoSelectedProfileTextView.setText(DvutavrK_Gost26020_83.getClosestMomentOfResistanceAndInertia(resultWtr, resultItr));
                 selectedProfileTextView.setText(R.string.dvutavr_K);
             }else {
                 infoSelectedProfileTextView.setText("Профиль не выбран");
